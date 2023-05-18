@@ -1,13 +1,16 @@
 # 🐝 Argo
-# 概要
-近年、開発者自身が自発的に提案できるソーシャルコーディングという新たなソフトウェア開発方式に注目されている。しかしながら、現状の「自発的ソフトウェア進化」を辿っている成功プロジェクトがどのように管理され、活発なコミュニティがどのように形成されているか分からない。
+# Abstract
+GitHub, with its vast repository count of over 10 million, attracts researchers interested in mining software repositories. Analyzing and investigating GitHub repositories can provide valuable insights for improving software development activities. However, there is currently no standardized method for accessing source code change histories and communication histories.
 
-本研究では、より多くのプロジェクトに対して同様の調査を行い、自発的進化の良いパターン・悪いパターンを発見し、どこを改善したらより自発進化が見込めるのかを提案することを目的とする。
-しかし、現状ではGraphQLを用いたデータ抽出には結構な労力が必要となるため、まずデータ分析を自動化するアプリケーションを作成する。
+This paper presents the implementation of a tool called "argo" that aims to fetch communication histories from GitHub. Argo accepts users' GraphQL queries to retrieve communication histories recorded on GitHub and generates line charts to visualize their transitions. As a case study, we implemented three types of GraphQL queries to fetch data on stargazers, issues, and pull requests from 11 repositories of famous programming languages hosted on GitHub.
 
-## 個人アクセストークンの設定
-queryディレクトリにあるStar.py, Issue.py, PullRequest.pyの個人アクセストークンを設定しないと動かない．
-user側からコマンドラインで設定できるようにする．
+Using Argo, we were able to fetch data at an impressive rate. The number of entries per second for stargazers, issues, and pull requests was 145.19, 81.27, and 139.90, respectively. Among the repositories, fetching stargazers' data for the repository "golang/go" proved to be the most time-consuming, with 96,425 entries requiring 716 seconds.
+
+In conclusion, we demonstrated that our tool, Argo, can successfully fetch data from GitHub and generate line charts based on the retrieved information.
+
+## Setting Personal Access Tokens
+The personal access tokens for Star.py, Issue.py, and PullRequest.py in the query directory must be set before it will work.
+The user can set them on the command line.
 
 # About
 ## License
@@ -21,9 +24,10 @@ pngtreeから引用.
 https://ja.pngtree.com/freepng/bee-animal-icon-honey-flying-bee-insect-bugs_3641499.html
 
 ## Project name comes from?
-Argogorytes（アワフキバチ）から蜂のアイコンにする. 
+Abbreviation for Auto Repository Graph Output.
+The logo of "Argo" is a bee icon from Argogorytes. 
 
-# 入出力仕様
+# I/O Specifications
 ## Usage
 
 ```sh
@@ -117,7 +121,7 @@ argo list
     └── stargazers.graphql
 ```
 
-## 出力
+## Output
 ### fetch data
 ```
 First Survey
@@ -128,7 +132,7 @@ First Survey
 Data acquisition completed! : 1.4907136
 ```
 ### draw chart
-- GitHubで公開されている11のプログラミング言語を対象に８つのメトリクスを描画した．
+- Eight metrics were drawn for 11 programming languages published on GitHub.
 
 <img src = "https://user-images.githubusercontent.com/69036517/172577380-d8397972-693c-40a3-b460-7d4c8f3ccafb.png" width = "320px"> <img src = "https://user-images.githubusercontent.com/69036517/172577395-17243e2b-1b8c-4109-a405-afec7275a636.png" width = "320px">
 <img src = "https://user-images.githubusercontent.com/69036517/172577273-31b4ee49-9f78-44ba-837d-fa293f417d36.png" width = "320px">
