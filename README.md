@@ -17,11 +17,7 @@ The user can set them on the command line.
 [GNU General Public License version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.ja.html)
 
 ## Logo  
-<img src = "https://user-images.githubusercontent.com/69036517/122642836-6017fc80-d147-11eb-8717-5d5664b589aa.png"
-     width = "320px">
-
-pngtreeから引用.
-https://ja.pngtree.com/freepng/bee-animal-icon-honey-flying-bee-insect-bugs_3641499.html
+![Honey_Bee_logo__4_-removebg-preview](https://github.com/kyoji63/Argo/assets/69036517/9af5899a-e61c-4472-8b28-ec89f746b04a)
 
 ## Project name comes from?
 Abbreviation for Auto Repository Graph Output.
