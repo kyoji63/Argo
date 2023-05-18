@@ -24,7 +24,7 @@ Abbreviation for Auto Repository Graph Output.
 The logo of "Argo" is a bee icon from Argogorytes. 
 
 # I/O Specifications
-## Usage
+## 🏃‍♀️ Usage
 
 ```sh
 argo [GLOBAL_OPTIONS] <COMMAND> [<ARGS>]
