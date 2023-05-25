@@ -19,6 +19,8 @@ The user can set them on the command line.
 ## Logo  
 ![Honey_Bee_logo__4_-removebg-preview](https://github.com/kyoji63/Argo/assets/69036517/9af5899a-e61c-4472-8b28-ec89f746b04a)
 
+https://www.canva.com/ より引用
+
 ## Project name comes from?
 Abbreviation for Auto Repository Graph Output.
 The logo of "Argo" is a bee icon from Argogorytes. 
